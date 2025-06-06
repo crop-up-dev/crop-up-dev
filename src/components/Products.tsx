@@ -10,7 +10,7 @@ const Products = () => {
       name: "Vitality Blend",
       category: "Physical Wellness",
       description: "A powerful combination of ginseng, ashwagandha, and rhodiola to boost energy and stamina naturally.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop&crop=center",
       ingredients: ["Ginseng Root", "Ashwagandha", "Rhodiola", "Ginger"],
       benefits: ["Increased Energy", "Better Stamina", "Reduced Fatigue"]
     },
@@ -19,7 +19,7 @@ const Products = () => {
       name: "Calm Mind",
       category: "Mental Wellness",
       description: "Carefully selected herbs including chamomile and lavender to promote relaxation and mental clarity.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop&crop=center",
       ingredients: ["Chamomile", "Lavender", "Lemon Balm", "Passionflower"],
       benefits: ["Reduced Stress", "Better Sleep", "Mental Clarity"]
     },
@@ -28,7 +28,7 @@ const Products = () => {
       name: "Passion Root",
       category: "Sexual Wellness",
       description: "Traditional herbs known for supporting intimate wellness and natural vitality for both men and women.",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=300&fit=crop&crop=center",
       ingredients: ["Maca Root", "Tribulus", "Horny Goat Weed", "Fenugreek"],
       benefits: ["Enhanced Libido", "Natural Vitality", "Hormonal Balance"]
     }

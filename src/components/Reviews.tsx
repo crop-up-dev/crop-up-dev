@@ -56,7 +56,7 @@ const Reviews = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-lg">★</span>
+                    <span key={i} className="text-white text-lg">★</span>
                   ))}
                 </div>
                 
@@ -82,7 +82,7 @@ const Reviews = () => {
             <div>
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
+                  <span key={i} className="text-white">★</span>
                 ))}
               </div>
               <div className="text-sm">Based on 1,200+ reviews</div>
