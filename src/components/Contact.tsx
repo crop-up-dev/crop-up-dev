@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 gradient-bg">
+    <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-sage-900 mb-6">
@@ -17,13 +17,13 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <Card className="border-sage-200 shadow-lg">
-            <CardHeader>
+          <Card className="border-sage-200 shadow-lg bg-white">
+            <CardHeader className="bg-white">
               <CardTitle className="text-2xl font-serif text-sage-900">
                 Contact Information
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6 bg-white">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
                   <span className="text-sage-600 text-xl">📞</span>
@@ -78,13 +78,13 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-sage-200 shadow-lg">
-            <CardHeader>
+          <Card className="border-sage-200 shadow-lg bg-white">
+            <CardHeader className="bg-white">
               <CardTitle className="text-2xl font-serif text-sage-900">
                 Get Started Today
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="bg-white">
               <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-sage-800 mb-2">
@@ -92,7 +92,7 @@ const Contact = () => {
                   </label>
                   <input 
                     type="text"
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-white"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                   </label>
                   <input 
                     type="email"
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-white"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-sage-800 mb-2">
                     Wellness Goals
                   </label>
-                  <select className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent">
+                  <select className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-white">
                     <option>Select your primary goal</option>
                     <option>Physical Wellness & Energy</option>
                     <option>Mental Wellness & Stress Relief</option>
@@ -127,7 +127,7 @@ const Contact = () => {
                   </label>
                   <textarea 
                     rows={4}
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-white"
                     placeholder="Tell us about your wellness needs..."
                   ></textarea>
                 </div>

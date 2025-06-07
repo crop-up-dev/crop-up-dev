@@ -52,8 +52,8 @@ const Reviews = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((review) => (
-            <Card key={review.id} className="border-sage-200 hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-6">
+            <Card key={review.id} className="border-sage-200 hover:shadow-lg transition-shadow duration-300 bg-white">
+              <CardContent className="p-6 bg-white">
                 <div className="flex items-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
                     <span key={i} className="text-sage-600 text-lg">★</span>

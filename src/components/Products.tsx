@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -55,7 +56,7 @@ const Products = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-sage-200">
+            <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-sage-200 bg-white">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={product.image}
@@ -64,7 +65,7 @@ const Products = () => {
                 />
               </div>
               
-              <CardHeader>
+              <CardHeader className="bg-white">
                 <div className="text-sm font-medium text-sage-600 mb-2">
                   {product.category}
                 </div>
@@ -76,7 +77,7 @@ const Products = () => {
                 </CardDescription>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="bg-white">
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-sage-800 mb-2">Key Ingredients:</h4>
@@ -106,7 +107,7 @@ const Products = () => {
                 </div>
               </CardContent>
 
-              <CardFooter>
+              <CardFooter className="bg-white">
                 <Button 
                   onClick={scrollToContact}
                   className="w-full bg-sage-600 hover:bg-sage-700 text-white"
