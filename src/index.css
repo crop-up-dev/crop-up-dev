@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 255 255 255;
+    --background: 249 248 246;
     --foreground: 51 69 33;
 
     --card: 255 255 255;
@@ -57,10 +57,10 @@
 
 @layer components {
   .gradient-bg {
-    background: #ffffff;
+    background: linear-gradient(135deg, #f7f9f6 0%, #e8f1e6 50%, #d2e3ce 100%);
   }
   
   .earth-gradient {
-    background: #ffffff;
+    background: linear-gradient(135deg, #faf9f7 0%, #f2f0eb 50%, #e6e1d6 100%);
   }
 }
