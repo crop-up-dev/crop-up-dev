@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -14,17 +13,6 @@ const Footer = () => {
               Empowering your wellness journey with premium herbal products that honor 
               nature's wisdom and modern quality standards.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-sage-700 rounded-full flex items-center justify-center hover:bg-sage-600 transition-colors cursor-pointer">
-                <span>📘</span>
-              </div>
-              <div className="w-10 h-10 bg-sage-700 rounded-full flex items-center justify-center hover:bg-sage-600 transition-colors cursor-pointer">
-                <span>📷</span>
-              </div>
-              <div className="w-10 h-10 bg-sage-700 rounded-full flex items-center justify-center hover:bg-sage-600 transition-colors cursor-pointer">
-                <span>🐦</span>
-              </div>
-            </div>
           </div>
           
           <div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,7 +29,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-sage-800">Phone</div>
-                  <div className="text-sage-700">1-800-WELLNESS</div>
+                  <div className="text-sage-700">+1 (202) 843-5111</div>
                 </div>
               </div>
               
