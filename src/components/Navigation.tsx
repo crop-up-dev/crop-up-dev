@@ -28,31 +28,31 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="font-serif text-2xl font-semibold text-sage-800">
-            Herbal Wellness
+            Herbal Heaven
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-sage-700 hover:text-sage-900 transition-colors"
+              className="text-black hover:text-gray-600 transition-colors"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('products')}
-              className="text-sage-700 hover:text-sage-900 transition-colors"
+              className="text-black hover:text-gray-600 transition-colors"
             >
               Products
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-sage-700 hover:text-sage-900 transition-colors"
+              className="text-black hover:text-gray-600 transition-colors"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('reviews')}
-              className="text-sage-700 hover:text-sage-900 transition-colors"
+              className="text-black hover:text-gray-600 transition-colors"
             >
               Reviews
             </button>
