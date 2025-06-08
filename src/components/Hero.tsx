@@ -34,9 +34,8 @@ const Hero = () => {
                 Explore Products
               </Button>
               <Button 
-                variant="outline"
                 size="lg" 
-                className="border-sage-600 text-sage-700 hover:bg-sage-600 hover:text-white px-8 py-4 text-lg"
+                className="bg-earth-600 hover:bg-earth-700 text-white px-8 py-4 text-lg"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
