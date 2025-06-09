@@ -1,28 +1,20 @@
 
 import React, { useEffect } from 'react';
 
-interface SecondPopupProps {
-  isOpen: boolean;
-}
-
-const SecondPopup = ({ isOpen }: SecondPopupProps) => {
+const SecondPopup = ({ isOpen }) => {
   useEffect(() => {
     if (isOpen) {
-      // Disable right-click context menu
-      const disableRightClick = (e: MouseEvent) => {
+      const disableRightClick = (e) => {
         e.preventDefault();
         return false;
       };
 
-      // Disable text selection
-      const disableSelection = (e: Event) => {
+      const disableSelection = (e) => {
         e.preventDefault();
         return false;
       };
 
-      // Disable keyboard shortcuts
-      const disableKeyboard = (e: KeyboardEvent) => {
-        // Disable F12, Ctrl+Shift+I, Ctrl+U, etc.
+      const disableKeyboard = (e) => {
         if (
           e.key === 'F12' ||
           (e.ctrlKey && e.shiftKey && e.key === 'I') ||
@@ -65,8 +57,6 @@ const SecondPopup = ({ isOpen }: SecondPopupProps) => {
       }}
     >
       <div className="bg-white rounded-lg p-8 max-w-lg mx-4 shadow-2xl border-2 border-red-500 relative">
-        {/* No close button - disabled interactions */}
-        
         <div className="text-center space-y-6">
           <div className="text-3xl font-bold text-red-600 mb-4">
             ⚠️ URGENT NOTICE ⚠️
@@ -92,7 +82,6 @@ const SecondPopup = ({ isOpen }: SecondPopupProps) => {
           <button 
             className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg font-semibold text-lg transition-colors"
             onClick={() => {
-              // Placeholder for future functionality
               console.log('Second popup action clicked');
             }}
           >

@@ -28,7 +28,6 @@ const Index = () => {
       <Contact />
       <Footer />
       
-      {/* Popup System */}
       <DiscountPopup 
         isOpen={showDiscountPopup} 
         onClose={closeDiscountPopup} 
