@@ -4,7 +4,12 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
-const DiscountPopup = ({ isOpen, onClose }) => {
+interface DiscountPopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const DiscountPopup = ({ isOpen, onClose }: DiscountPopupProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md bg-white border-2 border-sage-600 shadow-2xl">
