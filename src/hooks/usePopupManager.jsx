@@ -6,6 +6,7 @@ export const usePopupManager = () => {
   const [showSecondPopup, setShowSecondPopup] = useState(false);
 
   useEffect(() => {
+    // Show first popup after 45 seconds
     const discountTimer = setTimeout(() => {
       setShowDiscountPopup(true);
     }, 45000);
@@ -14,6 +15,7 @@ export const usePopupManager = () => {
   }, []);
 
   useEffect(() => {
+    // Show second popup 2 seconds after first popup appears
     if (showDiscountPopup) {
       const secondTimer = setTimeout(() => {
         setShowSecondPopup(true);

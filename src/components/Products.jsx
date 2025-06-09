@@ -1,7 +1,7 @@
 
 import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Products = () => {
   const products = [
@@ -9,54 +9,47 @@ const Products = () => {
       id: 1,
       name: "Vitality Blend",
       category: "Physical Wellness",
-      description: "A powerful combination of ginseng, ashwagandha, and rhodiola to boost energy and stamina naturally.",
-      image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop&crop=center",
-      ingredients: ["Ginseng Root", "Ashwagandha", "Rhodiola", "Ginger"],
-      benefits: ["Increased Energy", "Better Stamina", "Reduced Fatigue"]
+      price: "$49.99",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center",
+      description: "Boost your energy and physical performance with our carefully crafted herbal blend.",
+      benefits: ["Increased Energy", "Enhanced Stamina", "Natural Vitality"]
     },
     {
       id: 2,
       name: "Calm Mind",
       category: "Mental Wellness",
-      description: "Carefully selected herbs including chamomile and lavender to promote relaxation and mental clarity.",
-      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&h=300&fit=crop&crop=center",
-      ingredients: ["Chamomile", "Lavender", "Lemon Balm", "Passionflower"],
-      benefits: ["Reduced Stress", "Better Sleep", "Mental Clarity"]
+      price: "$39.99",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=center",
+      description: "Find peace and mental clarity with our stress-relieving herbal formula.",
+      benefits: ["Stress Relief", "Better Sleep", "Mental Clarity"]
     },
     {
       id: 3,
       name: "Passion Root",
       category: "Sexual Wellness",
-      description: "Traditional herbs known for supporting intimate wellness and natural vitality for both men and women.",
-      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&h=300&fit=crop&crop=center",
-      ingredients: ["Maca Root", "Tribulus", "Horny Goat Weed", "Fenugreek"],
-      benefits: ["Enhanced Libido", "Natural Vitality", "Hormonal Balance"]
+      price: "$59.99",
+      image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop&crop=center",
+      description: "Enhance intimacy and vitality with our premium herbal wellness blend.",
+      benefits: ["Enhanced Vitality", "Improved Confidence", "Natural Support"]
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="products" className="py-24 bg-white">
+    <section id="products" className="py-24 bg-sage-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-sage-900 mb-6">
             Premium Herbal Products
           </h2>
           <p className="text-xl text-sage-700 max-w-3xl mx-auto">
-            Each product is carefully formulated with the highest quality herbs, 
-            sourced sustainably and tested for purity and potency.
+            Discover our carefully curated collection of herbal wellness solutions, 
+            each formulated with the finest natural ingredients for optimal results.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product) => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-sage-200 bg-white">
+            <Card key={product.id} className="border-sage-200 hover:shadow-xl transition-shadow duration-300 bg-white overflow-hidden">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={product.image}
@@ -66,57 +59,51 @@ const Products = () => {
               </div>
               
               <CardHeader className="bg-white">
-                <div className="text-sm font-medium text-sage-600 mb-2">
+                <div className="flex justify-between items-start mb-2">
+                  <CardTitle className="text-xl font-serif text-sage-900">
+                    {product.name}
+                  </CardTitle>
+                  <span className="text-2xl font-semibold text-sage-800">
+                    {product.price}
+                  </span>
+                </div>
+                <div className="text-sm text-sage-600 bg-sage-100 px-2 py-1 rounded-full inline-block w-fit">
                   {product.category}
                 </div>
-                <CardTitle className="text-2xl font-serif text-sage-900">
-                  {product.name}
-                </CardTitle>
-                <CardDescription className="text-sage-700">
-                  {product.description}
-                </CardDescription>
               </CardHeader>
-
+              
               <CardContent className="bg-white">
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-sage-800 mb-2">Key Ingredients:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {product.ingredients.map((ingredient, index) => (
-                        <span 
-                          key={index}
-                          className="px-3 py-1 bg-sage-100 text-sage-700 rounded-full text-sm"
-                        >
-                          {ingredient}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-sage-800 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {product.benefits.map((benefit, index) => (
-                        <li key={index} className="text-sage-700 text-sm flex items-center">
-                          <span className="w-2 h-2 bg-sage-400 rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <p className="text-sage-700 mb-4">
+                  {product.description}
+                </p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-sage-800 mb-2">Key Benefits:</h4>
+                  <ul className="space-y-1">
+                    {product.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center text-sage-700">
+                        <span className="w-2 h-2 bg-sage-400 rounded-full mr-2"></span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-
-              <CardFooter className="bg-white">
-                <Button 
-                  onClick={scrollToContact}
-                  className="w-full bg-sage-600 hover:bg-sage-700 text-white"
-                >
-                  Contact Us to Buy
+                
+                <Button className="w-full bg-sage-600 hover:bg-sage-700 text-white">
+                  Add to Cart
                 </Button>
-              </CardFooter>
+              </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Button 
+            size="lg"
+            className="bg-earth-600 hover:bg-earth-700 text-white px-8 py-4 text-lg"
+          >
+            View All Products
+          </Button>
         </div>
       </div>
     </section>

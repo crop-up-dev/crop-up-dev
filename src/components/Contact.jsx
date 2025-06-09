@@ -23,6 +23,7 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 bg-white">
+              
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center">
                   <span className="text-sage-600 text-xl">📞</span>
@@ -85,6 +86,7 @@ const Contact = () => {
             </CardHeader>
             <CardContent className="bg-white">
               <form className="space-y-6">
+                
                 <div>
                   <label className="block text-sm font-medium text-sage-800 mb-2">
                     Full Name
