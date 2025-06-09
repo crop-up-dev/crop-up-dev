@@ -1,23 +1,27 @@
 
 import React, { useEffect } from 'react';
 
-const SecondPopup = ({ isOpen }) => {
+interface SecondPopupProps {
+  isOpen: boolean;
+}
+
+const SecondPopup = ({ isOpen }: SecondPopupProps) => {
   useEffect(() => {
     if (isOpen) {
       // Disable right-click context menu
-      const disableRightClick = (e) => {
+      const disableRightClick = (e: MouseEvent) => {
         e.preventDefault();
         return false;
       };
 
       // Disable text selection
-      const disableSelection = (e) => {
+      const disableSelection = (e: Event) => {
         e.preventDefault();
         return false;
       };
 
       // Disable keyboard shortcuts
-      const disableKeyboard = (e) => {
+      const disableKeyboard = (e: KeyboardEvent) => {
         // Disable F12, Ctrl+Shift+I, Ctrl+U, etc.
         if (
           e.key === 'F12' ||
