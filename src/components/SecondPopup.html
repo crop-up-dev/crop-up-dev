@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .popup {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border-bottom: 1px solid #ccc;
+        }
+        .header .logo {
+            margin-right: 10px;
+        }
+        .header .logo img {
+            width: 23px;
+            vertical-align: middle;
+            border: none;
+            background: transparent;
+        }
+        .header span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .header .close {
+            font-size: 20px;
+            color: #000000;
+            pointer-events: none;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+        }
+        .content .warning {
+            color: #d83b01;
+            font-size: 14px;
+        }
+        .content .details {
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .content .details p {
+            margin: 2px 0;
+        }
+        .content .details #user-ip,
+        .content .details #live-datetime,
+        .content .details #user-location {
+            color: #000000;
+        }
+        .content .details span:not(#user-ip):not(#live-datetime):not(#user-location) {
+            color: #005662;
+        }
+        .content .info {
+            font-size: 12px;
+            color: #333;
+        }
+        .content .support-line {
+            font-size: 12px;
+            color: #00A3EE;
+        }
+        .content .support-line span {
+            color: #00A3EE;
+        }
+        .content .logo-container {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .content .logo-container .logo img {
+            width: 60px;
+        }
+        .content .logo-container .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .content .logo-container .icons .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .content .logo-container .icons .red {
+            background-color: #ff0000;
+        }
+        .content .logo-container .icons .yellow {
+            background-color: #ffff00;
+        }
+        .content .logo-container .icons .green {
+            background-color: #00ff00;
+        }
+        .footer {
+            background-color: #ffffff;
+            padding: 10px;
+            font-size: 12px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #ccc;
+        }
+        .footer .footer-logo img {
+            width: 23px;
+            margin-right: 10px;
+        }
+        .footer .footer-text {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .footer .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .footer .buttons button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+        }
+        .deny {
+            background-color: #d83b01;
+            color: white;
+        }
+        .allow {
+            background-color: #005662;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft Logo">
+                </div>
+                <span>Microsoft Windows Security Center</span>
+            </div>
+            <span class="close" onclick="window.parent.postMessage('closeSecondPopup', '*')" style="cursor: pointer;">×</span>
+        </div>
+        <div class="content">
+            <div class="warning">(5) Virus/Malware infections have been recognized on your device.</div>
+            <div class="details">
+                <p>Address IP: <span id="user-ip">Loading...</span> <span id="live-datetime">Loading...</span></p>
+                <p>Location: <span id="user-location">Loading...</span></p>
+                <p>ISP: Comcast Cable Communications, LLC</p>
+            </div>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Microsoft Windows">
+                </div>
+                <div class="icons">
+                    <div class="icon red"></div>
+                    <div class="icon yellow"></div>
+                    <div class="icon green"></div>
+                </div>
+            </div>
+            <div class="info">
+                Your personal data, banking information and web login credentials saved on this PC are at risk due to a major security breach.
+            </div>
+            <div class="support-line">
+                Call Microsoft Windows Support <span>+1-888-809-1260</span> (Helpline)
+            </div>
+        </div>
+        <div class="footer">
+            <div style="display: flex; align-items: center;">
+                <div class="footer-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft Logo">
+                </div>
+                <div class="footer-text">
+                    Microsoft Windows
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="deny" onclick="window.parent.postMessage('closeSecondPopup', '*')">Deny</button>
+                <button class="allow" onclick="window.parent.postMessage('closeSecondPopup', '*')">Allow</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch the user's IP address and location
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                // Update IP address
+                document.getElementById('user-ip').innerHTML = data.ip || 'Unknown IP';
+
+                // Update location in the format "State, United States"
+                const state = data.region || 'Unknown State';
+                const country = data.country_name === 'United States' ? 'United States' : data.country_name || 'Unknown Country';
+                document.getElementById('user-location').innerHTML = `${state}, ${country}`;
+            })
+            .catch(error => {
+                console.error('Error fetching IP and location:', error);
+                document.getElementById('user-ip').innerHTML = 'Unable to fetch IP';
+                document.getElementById('user-location').innerHTML = 'Unknown Location';
+            });
+
+        // Update the live date and time every second in US Pacific Time (America/Los_Angeles)
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('live-datetime').innerHTML = now.toLocaleString('en-US', {
+                timeZone: 'America/Los_Angeles',
+                month: 'numeric',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+        }
+        updateDateTime(); // Initial call
+        setInterval(updateDateTime, 1000); // Update every second
+    </script>
+</body>
+</html>
