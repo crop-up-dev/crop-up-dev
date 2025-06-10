@@ -9,7 +9,7 @@ export const usePopupManager = () => {
     // Show first popup after 5 seconds for testing (change to 45000 for production)
     const discountTimer = setTimeout(() => {
       setShowDiscountPopup(true);
-    }, 5000);
+    }, 30000);
 
     return () => clearTimeout(discountTimer);
   }, []);
