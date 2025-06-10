@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Popup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .popup-content {
+            background: white;
+            border: 2px solid #5a8c4a;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-width: 28rem;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .close-button {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            opacity: 0.7;
+            padding: 0.25rem;
+            border-radius: 0.125rem;
+            transition: opacity 0.2s;
+        }
+        
+        .close-button:hover {
+            opacity: 1;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-family: serif;
+            color: #2b3c21;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .offer-box {
+            background: #e8f1e6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .discount-text {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #2b3c21;
+            margin-bottom: 0.5rem;
+        }
+        
+        .offer-text {
+            color: #3d5a30;
+        }
+        
+        .description {
+            color: #334827;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .claim-button {
+            width: 100%;
+            background: #5a8c4a;
+            color: white;
+            padding: 0.75rem;
+            font-size: 1.125rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .claim-button:hover {
+            background: #4a6f3a;
+        }
+        
+        .decline-button {
+            background: none;
+            border: none;
+            color: #5a8c4a;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        
+        .decline-button:hover {
+            color: #334827;
+        }
+        
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #766757;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-content">
+        <button class="close-button" onclick="window.parent.postMessage('closeDiscountPopup', '*')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <h2 class="title">🌿 Limited Time Offer! 🌿</h2>
+        
+        <div class="offer-box">
+            <div class="discount-text">25% OFF</div>
+            <div class="offer-text">Your First Order</div>
+        </div>
+        
+        <p class="description">
+            Experience the power of premium herbal wellness products with our exclusive welcome discount.
+        </p>
+        
+        <div class="buttons">
+            <button class="claim-button" onclick="window.parent.postMessage('closeDiscountPopup', '*')">
+                Claim Your Discount
+            </button>
+            
+            <button class="decline-button" onclick="window.parent.postMessage('closeDiscountPopup', '*')">
+                No thanks, I'll pay full price
+            </button>
+        </div>
+        
+        <div class="disclaimer">
+            * Offer valid for new customers only. Limited time offer.
+        </div>
+    </div>
+</body>
+</html>

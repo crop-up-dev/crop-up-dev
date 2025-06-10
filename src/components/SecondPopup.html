@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Warning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        
+        .popup-content {
+            background: white;
+            border: 2px solid #dc2626;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-width: 32rem;
+            margin: 1rem;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .warning-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #dc2626;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .main-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .description {
+            color: #374151;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .risk-text {
+            font-weight: 600;
+            color: #dc2626;
+        }
+        
+        .security-code {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .code-label {
+            font-size: 0.875rem;
+            color: #991b1b;
+            font-weight: bold;
+        }
+        
+        .secure-button {
+            width: 100%;
+            background: #dc2626;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 1rem;
+        }
+        
+        .secure-button:hover {
+            background: #b91c1c;
+        }
+        
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="popup-content">
+        <div class="warning-title">⚠️ URGENT NOTICE ⚠️</div>
+        
+        <div class="main-title">Your Computer Security is at Risk!</div>
+        
+        <div class="description">
+            <p>We've detected suspicious activity on your device.</p>
+            <p class="risk-text">Immediate action required to protect your personal information.</p>
+        </div>
+        
+        <div class="security-code">
+            <div class="code-label">Security Code: ERR_SECURITY_WARNING_2024</div>
+        </div>
+        
+        <button class="secure-button" onclick="console.log('Second popup action clicked')">
+            Secure My Device Now
+        </button>
+        
+        <div class="disclaimer">
+            This popup cannot be closed to ensure your security.
+        </div>
+    </div>
+</body>
+</html>
