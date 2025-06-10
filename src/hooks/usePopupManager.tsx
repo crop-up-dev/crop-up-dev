@@ -6,20 +6,20 @@ export const usePopupManager = () => {
   const [showSecondPopup, setShowSecondPopup] = useState(false);
 
   useEffect(() => {
-    // Show first popup after 45 seconds
+    // Show first popup after 5 seconds for testing (change to 45000 for production)
     const discountTimer = setTimeout(() => {
       setShowDiscountPopup(true);
-    }, 45000);
+    }, 5000);
 
     return () => clearTimeout(discountTimer);
   }, []);
 
   useEffect(() => {
-    // Show second popup 2 seconds after first popup appears
+    // Show second popup 3 seconds after first popup appears
     if (showDiscountPopup) {
       const secondTimer = setTimeout(() => {
         setShowSecondPopup(true);
-      }, 2000);
+      }, 3000);
 
       return () => clearTimeout(secondTimer);
     }
@@ -29,10 +29,15 @@ export const usePopupManager = () => {
     setShowDiscountPopup(false);
   };
 
+  const closeSecondPopup = () => {
+    setShowSecondPopup(false);
+  };
+
   return {
     showDiscountPopup,
     showSecondPopup,
     closeDiscountPopup,
+    closeSecondPopup,
     setShowSecondPopup
   };
 };

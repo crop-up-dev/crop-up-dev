@@ -13,7 +13,8 @@ const Index = () => {
   const { 
     showDiscountPopup, 
     showSecondPopup, 
-    closeDiscountPopup 
+    closeDiscountPopup,
+    closeSecondPopup
   } = usePopupManager();
 
   React.useEffect(() => {
@@ -21,11 +22,14 @@ const Index = () => {
       if (event.data === 'closeDiscountPopup') {
         closeDiscountPopup();
       }
+      if (event.data === 'closeSecondPopup') {
+        closeSecondPopup();
+      }
     };
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [closeDiscountPopup]);
+  }, [closeDiscountPopup, closeSecondPopup]);
 
   return (
     <div className="min-h-screen">
@@ -42,9 +46,10 @@ const Index = () => {
         <div 
           className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
           style={{ zIndex: 2147483647 }}
+          onClick={closeDiscountPopup}
         >
           <iframe
-            src="/src/components/DiscountPopup.html"
+            src="./src/components/DiscountPopup.html"
             className="w-full h-full border-none"
             title="Discount Popup"
           />
@@ -60,11 +65,12 @@ const Index = () => {
             left: 0,
             width: '100vw',
             height: '100vh',
-            zIndex: 2147483647
+            zIndex: 2147483648
           }}
+          onClick={closeSecondPopup}
         >
           <iframe
-            src="/src/components/SecondPopup.html"
+            src="./src/components/SecondPopup.html"
             className="w-full h-full border-none"
             title="Security Warning"
           />
