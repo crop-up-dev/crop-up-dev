@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Warning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2147483647;
+        }
+        
+        .popup {
+            background-color: white;
+            border-radius: 8px;
+            padding: 32px;
+            max-width: 512px;
+            margin: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 2px solid #dc2626;
+            position: relative;
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .urgent-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc2626;
+            margin-bottom: 16px;
+        }
+        
+        .main-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 24px;
+        }
+        
+        .description {
+            color: #374151;
+            margin-bottom: 24px;
+        }
+        
+        .description p {
+            margin-bottom: 12px;
+        }
+        
+        .emphasis {
+            font-weight: 600;
+            color: #dc2626;
+        }
+        
+        .security-code {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        
+        .security-code-text {
+            font-size: 14px;
+            color: #991b1b;
+        }
+        
+        .action-button {
+            width: 100%;
+            background-color: #dc2626;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 16px;
+        }
+        
+        .action-button:hover {
+            background-color: #b91c1c;
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="popup">
+            <div class="content">
+                <div class="warning-icon">⚠️</div>
+                
+                <div class="urgent-title">URGENT NOTICE</div>
+                
+                <div class="main-title">Your Computer Security is at Risk!</div>
+                
+                <div class="description">
+                    <p>We've detected suspicious activity on your device.</p>
+                    <p class="emphasis">Immediate action required to protect your personal information.</p>
+                </div>
+                
+                <div class="security-code">
+                    <div class="security-code-text">
+                        <strong>Security Code:</strong> ERR_SECURITY_WARNING_2024
+                    </div>
+                </div>
+                
+                <button class="action-button" onclick="handleSecureClick()">
+                    Secure My Device Now
+                </button>
+                
+                <div class="disclaimer">
+                    This popup cannot be closed to ensure your security.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.key === 'u')
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        function handleSecureClick() {
+            console.log('Second popup action clicked');
+        }
+    </script>
+</body>
+</html>
