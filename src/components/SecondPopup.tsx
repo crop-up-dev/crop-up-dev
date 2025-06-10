@@ -10,7 +10,7 @@ const SecondPopup = ({ isOpen }: SecondPopupProps) => {
 
   return (
     <iframe
-      src="/SecondPopup.html"
+      src="/src/components/SecondPopup.html"
       style={{
         position: 'fixed',
         top: 0,
